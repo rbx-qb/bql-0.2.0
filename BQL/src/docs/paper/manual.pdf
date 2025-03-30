@@ -1,1 +1,97 @@
+# Manual de Uso do BQL Interpreter
+
+## Introdução
+O **BQL Interpreter** é uma ferramenta projetada para simular operações quânticas usando **Bosonic Quantum Language (BQL)**. Ele permite a criação e manipulação de registradores quânticos bosônicos e oferece funcionalidades como entrelaçamento, aplicação de ruído e destilação de emaranhamento.
+
+## Instalação
+Para rodar o BQL Interpreter, certifique-se de ter o Python 3.10+ instalado, juntamente com as bibliotecas necessárias:
+
+```sh
+pip install matplotlib numpy tkinter
+```
+
+## Inicialização
+Execute o interpretador com o seguinte comando:
+
+```sh
+python3 bql_interpreter.py
+```
+
+Isso abrirá a interface gráfica onde os comandos podem ser inseridos.
+
+## Comandos Disponíveis
+
+### Criar um Registrador Quântico
+Cria um registrador bosônico com um número específico de níveis de energia.
+
+```
+CREATE <nome> <níveis>
+```
+Exemplo:
+```
+CREATE q1 5
+```
+
+### Entrelaçar Registradores
+Cria um estado emaranhado entre dois registradores quânticos existentes.
+
+```
+ENTANGLE <reg1> <reg2>
+```
+Exemplo:
+```
+ENTANGLE q1 q2
+```
+
+### Aplicar Ruído
+Adiciona ruído a um registrador quântico.
+
+```
+APPLY_NOISE <registrador> <intensidade>
+```
+Exemplo:
+```
+APPLY_NOISE q1 0.05
+```
+
+### Destilação de Emaranhamento
+Reduz o ruído em um registrador, melhorando a qualidade do emaranhamento.
+
+```
+DISTILL <registrador>
+```
+Exemplo:
+```
+DISTILL q1
+```
+
+### Mostrar Estado de um Registrador
+Exibe graficamente a distribuição das amplitudes de probabilidade nos diferentes níveis de energia.
+
+```
+SHOW <registrador>
+```
+Exemplo:
+```
+SHOW q1
+```
+
+### Exportar Dados
+Salva os dados dos registradores em um arquivo JSON.
+
+```
+EXPORT
+```
+
+## Aplicabilidade
+O BQL Interpreter é útil para:
+- Simulação de estados quânticos bosônicos
+- Testes de codificação de informação quântica
+- Ensino e aprendizado sobre mecânica quântica e emaranhamento
+
+## Melhorias Futuras
+- Suporte a algoritmos quânticos mais complexos
+- Integração com plataformas de computação quântica reais
+- Representação gráfica aprimorada dos estados quânticos
+
 
